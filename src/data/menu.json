@@ -1,0 +1,8 @@
+[
+  { "label": "Marketing vidéo", "path": "/marketing-video/" },
+  { "label": "Savoir-faire", "path": "/savoir-faire/" },
+  { "label": "Accompagnement", "path": "/accompagnement/" },
+  { "label": "Réalisations", "path": "/realisations/" },
+  { "label": "La Meute", "path": "/la-meute/" },
+  { "label": "Contact", "path": "/contact/" }
+]
