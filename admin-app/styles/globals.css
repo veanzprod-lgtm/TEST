@@ -1,0 +1,165 @@
+:root {
+  color-scheme: light dark;
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  line-height: 1.6;
+  font-size: 16px;
+  background-color: var(--background, #0f172a);
+  color: var(--foreground, #0f172a);
+}
+
+body {
+  margin: 0;
+  background: #f8fafc;
+  color: #0f172a;
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background: #0f172a;
+    color: #e2e8f0;
+  }
+}
+
+a {
+  color: inherit;
+}
+
+a:focus,
+button:focus,
+input:focus,
+textarea:focus,
+select:focus {
+  outline: 3px solid #6366f1;
+  outline-offset: 2px;
+}
+
+main {
+  min-height: 100vh;
+  padding: 2rem 1.5rem 4rem;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+header,
+footer {
+  padding: 1.5rem 1.5rem 0;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+button {
+  font: inherit;
+  border: none;
+  background: #6366f1;
+  color: white;
+  border-radius: 0.75rem;
+  padding: 0.6rem 1.4rem;
+  cursor: pointer;
+  transition: transform 200ms ease, box-shadow 200ms ease;
+}
+
+button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 24px rgba(99, 102, 241, 0.35);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  button {
+    transition: none;
+  }
+  button:hover {
+    transform: none;
+    box-shadow: none;
+  }
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  box-shadow: none;
+  transform: none;
+}
+
+form {
+  display: grid;
+  gap: 1.5rem;
+}
+
+fieldset {
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  border-radius: 1rem;
+  padding: 1.5rem;
+}
+
+legend {
+  font-weight: 600;
+  padding: 0 0.5rem;
+}
+
+label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.35rem;
+}
+
+input,
+textarea,
+select {
+  width: 100%;
+  border-radius: 0.75rem;
+  border: 1px solid rgba(15, 23, 42, 0.2);
+  padding: 0.6rem 0.9rem;
+  font: inherit;
+  background: white;
+  color: inherit;
+}
+
+input[aria-invalid='true'],
+textarea[aria-invalid='true'],
+select[aria-invalid='true'] {
+  border-color: #ef4444;
+}
+
+.table-card {
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 16px 45px rgba(15, 23, 42, 0.1);
+  background: white;
+}
+
+.table-card thead {
+  background: #1f2937;
+  color: #f8fafc;
+}
+
+.table-card th,
+.table-card td {
+  padding: 0.9rem 1.1rem;
+  text-align: left;
+}
+
+.table-card tbody tr:nth-child(even) {
+  background: rgba(99, 102, 241, 0.06);
+}
+
+.toast-region {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  max-width: 320px;
+  padding: 1rem 1.25rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 12px 40px rgba(15, 23, 42, 0.16);
+  background: #111827;
+  color: #f9fafb;
+}
+
+.toast-success {
+  background: #10b981;
+}
+
+.toast-error {
+  background: #ef4444;
+}
