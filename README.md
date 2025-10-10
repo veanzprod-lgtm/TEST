@@ -1,35 +1,61 @@
-# Website Project
+# Loupiote Studio – Site vitrine
 
-## Overview
-This project is a simple website that includes HTML, CSS, and JavaScript files to create a dynamic and visually appealing web page.
+## Aperçu
+Ce dépôt contient une maquette complète de site vitrine pour une agence vidéo, développée en HTML sémantique, CSS (via `src/styles/style.css`) et JavaScript moderne (`src/scripts/main.js`). Le contenu éditorial et les listings (menu, réalisations, équipe, informations de contact) sont fournis par des fichiers JSON dans `src/data/` qui sont chargés au runtime.
 
-## Project Structure
-```
-website-project
-├── src
-│   ├── index.html        # Main HTML document for the website
-│   ├── styles
-│   │   └── main.css      # CSS styles for the website
-│   ├── scripts
-│   │   └── main.js       # JavaScript code for interactivity
-│   └── assets
-│       └── README.md     # Documentation for assets used in the project
-├── package.json          # npm configuration file
-└── README.md             # Project documentation
-```
+## Prérequis
+- [Node.js](https://nodejs.org/) >= 16 (recommandé)
+- npm (fourni avec Node.js)
 
-## Getting Started
-To get started with this project, clone the repository and install the necessary dependencies using npm.
+## Installer les dépendances
+Après avoir cloné le dépôt, installez les dépendances de développement (principalement `live-server` pour le serveur local) :
 
 ```bash
 npm install
 ```
 
-## Usage
-Open `src/index.html` in your web browser to view the website. You can modify the CSS in `src/styles/main.css` and the JavaScript in `src/scripts/main.js` to customize the appearance and behavior of the site.
+## Lancer le site en local
+Un serveur de développement simple est fourni. Il sert les fichiers statiques depuis `src/` et recharge automatiquement lorsque vous modifiez les fichiers.
 
-## Contributing
-Contributions are welcome! Please feel free to submit a pull request or open an issue for any suggestions or improvements.
+```bash
+npm start
+```
 
-## License
-This project is licensed under the MIT License. See the LICENSE file for more details.
+Cela démarre `live-server` sur `http://127.0.0.1:8080` (l’URL exacte est rappelée dans la console). Ouvrez cette adresse dans votre navigateur pour parcourir le site.
+
+> 💡 Astuce : si le port 8080 est déjà utilisé, `live-server` en choisira un autre automatiquement. Vérifiez le message affiché après `npm start`.
+
+## Structure du projet
+```
+src
+├── index.html                  # Page d’accueil
+├── marketing-video/            # Page pilier Marketing vidéo
+├── savoir-faire/               # Formats et compétences
+├── accompagnement/             # Méthodes et FAQ
+├── realisations/               # Listing + fiches projet
+├── la-meute/                   # Équipe et culture
+├── contact/                    # Bureaux, formulaire, carte
+├── cgv/ et mentions-legales/   # Pages légales
+├── styles/style.css            # Feuille de styles principale
+├── scripts/main.js             # Logique UI + data loading
+├── data/
+│   ├── menu.json               # Navigation principale
+│   ├── site.json               # Infos globales (coordonnées…)
+│   ├── realisations.json       # Projets du portfolio
+│   └── team.json               # Membres de l’équipe
+├── sitemap.xml                 # Sitemap statique
+└── robots.txt                  # Fichier robots
+```
+
+## Personnalisation du contenu
+- Modifiez les fichiers JSON dans `src/data/` pour mettre à jour le menu, les coordonnées, les projets ou les profils de l’équipe.
+- Les images/vidéos utilisent des placeholders ; remplacez les URLs par vos assets optimisés.
+- Les métadonnées SEO (titre, description, Open Graph) se trouvent en tête de chaque fichier HTML.
+
+## Déploiement
+Le site est statique. Un simple hébergement de fichiers (Netlify, Vercel, GitHub Pages, OVH, etc.) suffit :
+1. Construisez/optimisez vos assets si nécessaire.
+2. Déployez l’intégralité du dossier `src/` sur votre hébergeur.
+
+## Tests
+Aucun test automatisé n’est fourni. Vous pouvez néanmoins exécuter des audits Lighthouse dans votre navigateur pour valider les performances, l’accessibilité et le SEO.

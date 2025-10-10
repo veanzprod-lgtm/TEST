@@ -1,24 +1,233 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr" data-page="home">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Website Project</title>
-    <link rel="stylesheet" href="styles/main.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Loupiote Studio — Agence de marketing vidéo stratégique</title>
+    <meta name="description" content="Loupiote Studio accompagne les marques ambitieuses sur toute la chaîne de valeur vidéo : stratégie, production et diffusion multi-plateformes."/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <meta property="og:title" content="Loupiote Studio — Agence de marketing vidéo stratégique">
+    <meta property="og:description" content="Stratégie, production et diffusion de contenus vidéo pensés pour la performance."/>
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.loupiote-studio.com/">
+    <meta property="og:image" content="https://www.loupiote-studio.com/assets/og-default.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="canonical" href="https://www.loupiote-studio.com/">
+    <style>
+        :root {
+            color-scheme: light dark;
+            --font-base: 'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif;
+            --bg: #0c0d10;
+            --text: #101219;
+            --radius-lg: 20px;
+        }
+        *,*::before,*::after{box-sizing:border-box;}
+        body{margin:0;font-family:var(--font-base);min-height:100vh;background:#f6f7fb;color:var(--text);}
+        body[data-theme="dark"]{background:var(--bg);color:#f2f4ff;}
+        a{color:inherit;text-decoration:none;}
+        .skip-link{position:absolute;left:-999px;top:auto;width:1px;height:1px;overflow:hidden;}
+        .skip-link:focus{left:16px;top:16px;width:auto;height:auto;padding:12px 16px;background:#111;color:#fff;z-index:2000;border-radius:12px;}
+        header{position:sticky;top:0;z-index:1000;}
+    </style>
+    <link rel="preload" href="styles/style.css" as="style">
+    <link rel="stylesheet" href="styles/style.css">
+    <script type="application/ld+json" id="organization-schema"></script>
 </head>
-<body>
-    <header>
-        <h1>Welcome to the Website Project</h1>
+<body data-theme="light">
+    <a href="#main" class="skip-link">Passer au contenu</a>
+    <header class="site-header" role="banner">
+        <div class="container header-inner">
+            <a class="site-logo" href="/">
+                <span aria-hidden="true" class="logo-shape"></span>
+                <span class="logo-text" data-site-brand>Loupiote Studio</span>
+            </a>
+            <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation">
+                <span class="sr-only">Ouvrir le menu</span>
+                <span class="nav-line"></span>
+                <span class="nav-line"></span>
+                <span class="nav-line"></span>
+            </button>
+            <nav class="site-nav" aria-label="Navigation principale">
+                <ul id="primary-navigation" class="nav-list" data-menu></ul>
+            </nav>
+            <div class="header-actions">
+                <button class="theme-toggle" type="button" aria-pressed="false" data-theme-toggle>
+                    <span class="sr-only">Changer de thème</span>
+                    <svg aria-hidden="true" focusable="false" width="20" height="20" viewBox="0 0 24 24"><path d="M12 3a1 1 0 0 1 1 1v2a1 1 0 1 1-2 0V4a1 1 0 0 1 1-1Zm7.071 1.929a1 1 0 0 1 0 1.414l-1.414 1.414a1 1 0 1 1-1.414-1.414l1.414-1.414a1 1 0 0 1 1.414 0ZM21 11a1 1 0 1 1 0 2h-2a1 1 0 1 1 0-2h2ZM6.343 5.343a1 1 0 0 1 1.414 0L9.17 6.757a1 1 0 1 1-1.414 1.414L6.343 6.757a1 1 0 0 1 0-1.414ZM12 17a1 1 0 0 1 1 1v2a1 1 0 1 1-2 0v-2a1 1 0 0 1 1-1Zm-7.071-4a1 1 0 0 1 1 1H4a1 1 0 1 1 0-2h1.929a1 1 0 0 1-.071 1Zm.071 5.071a1 1 0 0 1 1.414 0l1.414 1.414a1 1 0 1 1-1.414 1.414L6.343 19.485a1 1 0 0 1 0-1.414ZM18 16a1 1 0 0 1 .707 1.707l-1.414 1.414a1 1 0 0 1-1.414-1.414L17.293 16A1 1 0 0 1 18 16Z"/></svg>
+                </button>
+                <a class="btn btn-primary" href="/contact/">Parlons-en</a>
+            </div>
+        </div>
+        <div class="mobile-drawer" data-mobile-drawer>
+            <div class="drawer-inner">
+                <div class="drawer-top">
+                    <span class="logo-text" data-site-brand-mobile>Loupiote Studio</span>
+                    <button class="drawer-close" type="button" data-drawer-close>
+                        <span class="sr-only">Fermer le menu</span>
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <nav aria-label="Navigation mobile">
+                    <ul class="drawer-menu" data-menu-mobile></ul>
+                </nav>
+                <a class="btn btn-primary" href="/contact/">Parlons-en</a>
+            </div>
+        </div>
     </header>
-    <main>
-        <section>
-            <h2>About</h2>
-            <p>This is a sample website project to demonstrate the structure and content of a web page.</p>
+    <main id="main" tabindex="-1">
+        <section class="hero" data-animate="fade-up">
+            <div class="container hero-content">
+                <p class="eyebrow">Agence créative &amp; stratégique</p>
+                <h1>Des histoires vidéo qui activent vos audiences.</h1>
+                <p class="lead">Nous orchestrons des campagnes audiovisuelles sur-mesure, du concept à la diffusion, pour amplifier vos performances marketing.</p>
+                <div class="hero-actions">
+                    <a class="btn btn-primary" href="/realisations/">Voir nos réalisations</a>
+                    <a class="btn btn-secondary" href="/contact/">Parlons-en</a>
+                </div>
+                <div class="hero-meta">
+                    <span class="badge badge-new">Nouveau</span>
+                    <p>Découvrez notre dernier film pour la gamme NovaTech.</p>
+                </div>
+            </div>
+            <div class="hero-visual" aria-hidden="true">
+                <div class="video-frame">
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='720' height='540' viewBox='0 0 720 540'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0%25' stop-color='%230c0d10'/%3E%3Cstop offset='100%25' stop-color='%233c5cff'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='720' height='540' fill='url(%23g)'/%3E%3Ccircle cx='540' cy='150' r='120' fill='%23ffffff' fill-opacity='0.08'/%3E%3Ccircle cx='180' cy='390' r='180' fill='%23ffffff' fill-opacity='0.04'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='Inter,Arial,sans-serif' font-size='36' fill='%23ffffff' fill-opacity='0.64'%3ELoupiote Studio%3C/text%3E%3C/svg%3E" alt="" loading="lazy">
+                </div>
+            </div>
+        </section>
+
+        <section class="clients" aria-labelledby="clients-title" data-animate="fade-up">
+            <div class="container">
+                <div class="section-header">
+                    <h2 id="clients-title">Ils nous font confiance</h2>
+                    <p>Une sélection de partenaires qui co-créent des récits mémorables avec nos équipes.</p>
+                </div>
+                <div class="logo-grid" data-logos>
+                    <!-- Logos injectés dynamiquement -->
+                </div>
+            </div>
+        </section>
+
+        <section class="services" aria-labelledby="services-title" data-animate="fade-up">
+            <div class="container">
+                <div class="section-header">
+                    <h2 id="services-title">Ce que nous réalisons</h2>
+                    <p>Des formats à forte valeur ajoutée pour soutenir chaque étape de votre funnel marketing.</p>
+                </div>
+                <div class="service-grid">
+                    <article class="card service-card">
+                        <span class="icon" aria-hidden="true">🎯</span>
+                        <h3>Publicités impactantes</h3>
+                        <p>Des spots courts calibrés pour la TV, le DOOH et les plateformes sociales qui boostent la mémorisation.</p>
+                    </article>
+                    <article class="card service-card">
+                        <span class="icon" aria-hidden="true">🏢</span>
+                        <h3>Films d’entreprise</h3>
+                        <p>Mettre en scène votre vision, vos équipes et vos innovations à travers un storytelling authentique.</p>
+                    </article>
+                    <article class="card service-card">
+                        <span class="icon" aria-hidden="true">🧠</span>
+                        <h3>Vidéos pédagogiques</h3>
+                        <p>Simplifier les messages complexes avec des formats didactiques et inclusifs adaptés à vos publics.</p>
+                    </article>
+                    <article class="card service-card">
+                        <span class="icon" aria-hidden="true">🌐</span>
+                        <h3>Brand content</h3>
+                        <p>Créer une programmation éditoriale régulière pour nourrir la conversation et la préférence de marque.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="method" aria-labelledby="method-title" data-animate="fade-up">
+            <div class="container">
+                <div class="section-header">
+                    <h2 id="method-title">Notre méthode intégrée</h2>
+                    <p>Un accompagnement complet pour transformer vos objectifs business en expériences vidéo engageantes.</p>
+                </div>
+                <ol class="method-steps">
+                    <li class="step">
+                        <div class="step-number">01</div>
+                        <h3>Stratégie éditoriale</h3>
+                        <p>Analyse de votre audience, cadrage des KPI et définition des concepts différenciants.</p>
+                    </li>
+                    <li class="step">
+                        <div class="step-number">02</div>
+                        <h3>Production agilité</h3>
+                        <p>Repérages, tournage multi-caméras, motion design et post-production colorimétrique premium.</p>
+                    </li>
+                    <li class="step">
+                        <div class="step-number">03</div>
+                        <h3>Diffusion &amp; optimisation</h3>
+                        <p>Déclinaisons multi-plateformes, sous-titrage, A/B testing et reporting granulaire.</p>
+                    </li>
+                </ol>
+            </div>
+        </section>
+
+        <section class="featured" aria-labelledby="featured-title" data-animate="fade-up">
+            <div class="container">
+                <div class="section-header">
+                    <h2 id="featured-title">Réalisations récentes</h2>
+                    <p>Un aperçu de projets qui conjuguent créativité et performance.</p>
+                </div>
+                <div class="project-grid" data-featured-projects>
+                    <!-- Projets injectés dynamiquement -->
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-band" data-animate="fade-up" aria-labelledby="cta-title">
+            <div class="container cta-inner">
+                <div>
+                    <h2 id="cta-title">Un brief, une vision, parlons-en.</h2>
+                    <p>Réservez un créneau stratégique avec un directeur de création pour cadrer vos besoins vidéo.</p>
+                </div>
+                <a class="btn btn-primary" href="/contact/">Discuter de votre projet</a>
+            </div>
         </section>
     </main>
-    <footer>
-        <p>&copy; 2023 Website Project</p>
+    <footer class="site-footer" role="contentinfo">
+        <div class="container footer-grid">
+            <div>
+                <a class="site-logo footer-logo" href="/">
+                    <span aria-hidden="true" class="logo-shape"></span>
+                    <span class="logo-text" data-site-brand-footer>Loupiote Studio</span>
+                </a>
+                <p class="footer-baseline" data-site-baseline>Studio vidéo basé à Lyon &amp; Paris.</p>
+                <div class="footer-contact">
+                    <a class="footer-link" data-site-email href="mailto:bonjour@loupiote-studio.com">bonjour@loupiote-studio.com</a>
+                    <a class="footer-link" data-site-phone href="tel:+33472000001">+33 4 72 00 00 01</a>
+                </div>
+                <ul class="social-links" data-social-links></ul>
+            </div>
+            <div>
+                <h3>Ressources</h3>
+                <ul class="footer-links">
+                    <li><a href="/marketing-video/">Marketing vidéo</a></li>
+                    <li><a href="/savoir-faire/">Savoir-faire</a></li>
+                    <li><a href="/accompagnement/">Accompagnement</a></li>
+                    <li><a href="/realisations/">Réalisations</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3>Informations</h3>
+                <ul class="footer-links">
+                    <li><a href="/mentions-legales/">Mentions légales</a></li>
+                    <li><a href="/cgv/">CGV</a></li>
+                    <li><a href="/contact/">Contact</a></li>
+                    <li><a href="mailto:jobs@loupiote-studio.com">Recrutement</a></li>
+                </ul>
+            </div>
+        </div>
+        <p class="footer-meta">© <span data-current-year></span> Loupiote Studio. Tous droits réservés.</p>
     </footer>
-    <script src="scripts/main.js"></script>
+    <div class="toast" role="status" aria-live="polite" hidden data-toast>
+        <p data-toast-message>Message envoyé avec succès.</p>
+        <button type="button" class="toast-close" data-toast-close aria-label="Fermer la notification">×</button>
+    </div>
+    <script type="module" src="scripts/main.js"></script>
 </body>
 </html>
